@@ -30,7 +30,6 @@ public async static __Module_Setup(string sengine_path, string module_path, stri
         
     __CPPAPI_ServerSchedule.CreateHttpServer(yun_ip, wan_ip, ALittle.RoutePort.RT_VERSION_HTTP + port_offset, false);
     __CPPAPI_ServerSchedule.CreateClientServer(yun_ip, wan_ip, ALittle.RoutePort.RT_VERSION_CLIENT + port_offset, false);
-    __CPPAPI_ServerSchedule.UseFileCache(true);
     
     A_WebAccountManager.Setup();
     g_VersionManager.Setup();
