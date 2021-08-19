@@ -606,7 +606,7 @@ function VersionServer.HandleHttpQUploadVersionFile(client, msg)
 		ALittle.File_DeleteFile(file_path)
 	end
 	Lua.Assert(error == nil, error)
-	if msg.file_path == "CurVersion.db" then
+	if msg.file_path == "CurVersionPackage.db" then
 		sql = "UPDATE `VersionInfo` SET `status`=1 WHERE `version_id`=? AND `account_id`=?"
 		query = ALittle.MysqlStatementQuery()
 		query.sql = sql

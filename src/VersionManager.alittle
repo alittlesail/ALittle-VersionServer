@@ -669,7 +669,7 @@ public await static HandleHttpQUploadVersionFile(ALittle.IHttpFileReceiver clien
     if (error != null) ALittle.File_DeleteFile(file_path);
     assert(error == null, error);
     
-    if (msg.file_path == "CurVersion.db")
+    if (msg.file_path == "CurVersionPackage.db")
     {
         sql = "UPDATE `VersionInfo` SET `status`=1 WHERE `version_id`=? AND `account_id`=?";
         query = new ALittle.MysqlStatementQuery();
